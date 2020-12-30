@@ -1,0 +1,100 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="collectionTracking">
+            <h2><span jhiTranslate="ccwApplicationApp.collectionTracking.detail.title">Collection Tracking</span> {{ collectionTracking.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.employeeID">Employee ID</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.employeeID }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.unitID">Unit ID</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.unitID }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.employeeName">Employee Name</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.employeeName }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.businessProposal">Business Proposal</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.businessProposal }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.subProposal">Sub Proposal</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.subProposal }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.mobileNo">Mobile No</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.mobileNo }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.relationId">Relation Id</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.relationId }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.accountNo">Account No</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.accountNo }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.accountTitle">Account Title</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.accountTitle }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.noOfVisits">No Of Visits</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.noOfVisits }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.osAmount">Os Amount</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.osAmount }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.osProfit">Os Profit</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.osProfit }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.odDays">Od Days</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.odDays }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.loanOfficer">Loan Officer</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.loanOfficer }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.visitedBy">Visited By</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.visitedBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.pptDate">Ppt Date</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.pptDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.remakrs">Remakrs</span></dt>
+                <dd>
+                    <span>{{ collectionTracking.remakrs }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApplicationApp.collectionTracking.employee">Employee</span></dt>
+                <dd>
+                    <div *ngIf="collectionTracking.employee">
+                        <a [routerLink]="['/employee', collectionTracking.employee?.id, 'view']">{{ collectionTracking.employee?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/collection-tracking', collectionTracking.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,254 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-collection-tracking-heading" jhiTranslate="ccwApplicationApp.collectionTracking.home.createOrEditLabel">Create or edit a Collection Tracking</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.employeeID" for="field_employeeID">Employee ID</label>
+                    <input type="text" class="form-control" name="employeeID" id="field_employeeID"
+                           formControlName="employeeID"/>
+                    <div *ngIf="editForm.get('employeeID')!.invalid && (editForm.get('employeeID')!.dirty || editForm.get('employeeID')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('employeeID')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.unitID" for="field_unitID">Unit ID</label>
+                    <input type="text" class="form-control" name="unitID" id="field_unitID"
+                           formControlName="unitID"/>
+                    <div *ngIf="editForm.get('unitID')!.invalid && (editForm.get('unitID')!.dirty || editForm.get('unitID')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('unitID')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.employeeName" for="field_employeeName">Employee Name</label>
+                    <input type="text" class="form-control" name="employeeName" id="field_employeeName"
+                           formControlName="employeeName"/>
+                    <div *ngIf="editForm.get('employeeName')!.invalid && (editForm.get('employeeName')!.dirty || editForm.get('employeeName')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('employeeName')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.businessProposal" for="field_businessProposal">Business Proposal</label>
+                    <input type="text" class="form-control" name="businessProposal" id="field_businessProposal"
+                           formControlName="businessProposal"/>
+                    <div *ngIf="editForm.get('businessProposal')!.invalid && (editForm.get('businessProposal')!.dirty || editForm.get('businessProposal')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('businessProposal')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.subProposal" for="field_subProposal">Sub Proposal</label>
+                    <input type="text" class="form-control" name="subProposal" id="field_subProposal"
+                           formControlName="subProposal"/>
+                    <div *ngIf="editForm.get('subProposal')!.invalid && (editForm.get('subProposal')!.dirty || editForm.get('subProposal')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('subProposal')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.mobileNo" for="field_mobileNo">Mobile No</label>
+                    <input type="text" class="form-control" name="mobileNo" id="field_mobileNo"
+                           formControlName="mobileNo"/>
+                    <div *ngIf="editForm.get('mobileNo')!.invalid && (editForm.get('mobileNo')!.dirty || editForm.get('mobileNo')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('mobileNo')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.relationId" for="field_relationId">Relation Id</label>
+                    <input type="text" class="form-control" name="relationId" id="field_relationId"
+                           formControlName="relationId"/>
+                    <div *ngIf="editForm.get('relationId')!.invalid && (editForm.get('relationId')!.dirty || editForm.get('relationId')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('relationId')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.accountNo" for="field_accountNo">Account No</label>
+                    <input type="text" class="form-control" name="accountNo" id="field_accountNo"
+                           formControlName="accountNo"/>
+                    <div *ngIf="editForm.get('accountNo')!.invalid && (editForm.get('accountNo')!.dirty || editForm.get('accountNo')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('accountNo')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.accountTitle" for="field_accountTitle">Account Title</label>
+                    <input type="text" class="form-control" name="accountTitle" id="field_accountTitle"
+                           formControlName="accountTitle"/>
+                    <div *ngIf="editForm.get('accountTitle')!.invalid && (editForm.get('accountTitle')!.dirty || editForm.get('accountTitle')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('accountTitle')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.noOfVisits" for="field_noOfVisits">No Of Visits</label>
+                    <input type="number" class="form-control" name="noOfVisits" id="field_noOfVisits"
+                           formControlName="noOfVisits"/>
+                    <div *ngIf="editForm.get('noOfVisits')!.invalid && (editForm.get('noOfVisits')!.dirty || editForm.get('noOfVisits')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('noOfVisits')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('noOfVisits')?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.osAmount" for="field_osAmount">Os Amount</label>
+                    <input type="number" class="form-control" name="osAmount" id="field_osAmount"
+                           formControlName="osAmount"/>
+                    <div *ngIf="editForm.get('osAmount')!.invalid && (editForm.get('osAmount')!.dirty || editForm.get('osAmount')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('osAmount')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('osAmount')?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.osProfit" for="field_osProfit">Os Profit</label>
+                    <input type="number" class="form-control" name="osProfit" id="field_osProfit"
+                           formControlName="osProfit"/>
+                    <div *ngIf="editForm.get('osProfit')!.invalid && (editForm.get('osProfit')!.dirty || editForm.get('osProfit')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('osProfit')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('osProfit')?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.odDays" for="field_odDays">Od Days</label>
+                    <input type="text" class="form-control" name="odDays" id="field_odDays"
+                           formControlName="odDays"/>
+                    <div *ngIf="editForm.get('odDays')!.invalid && (editForm.get('odDays')!.dirty || editForm.get('odDays')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('odDays')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.loanOfficer" for="field_loanOfficer">Loan Officer</label>
+                    <input type="text" class="form-control" name="loanOfficer" id="field_loanOfficer"
+                           formControlName="loanOfficer"/>
+                    <div *ngIf="editForm.get('loanOfficer')!.invalid && (editForm.get('loanOfficer')!.dirty || editForm.get('loanOfficer')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('loanOfficer')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.visitedBy" for="field_visitedBy">Visited By</label>
+                    <input type="text" class="form-control" name="visitedBy" id="field_visitedBy"
+                           formControlName="visitedBy"/>
+                    <div *ngIf="editForm.get('visitedBy')!.invalid && (editForm.get('visitedBy')!.dirty || editForm.get('visitedBy')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('visitedBy')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.pptDate" for="field_pptDate">Ppt Date</label>
+                    <div class="input-group">
+                        <input id="field_pptDate" type="text" class="form-control" name="pptDate" ngbDatepicker #pptDateDp="ngbDatepicker" formControlName="pptDate"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="pptDateDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                    <div *ngIf="editForm.get('pptDate')!.invalid && (editForm.get('pptDate')!.dirty || editForm.get('pptDate')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('pptDate')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.remakrs" for="field_remakrs">Remakrs</label>
+                    <input type="text" class="form-control" name="remakrs" id="field_remakrs"
+                           formControlName="remakrs"/>
+                    <div *ngIf="editForm.get('remakrs')!.invalid && (editForm.get('remakrs')!.dirty || editForm.get('remakrs')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('remakrs')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApplicationApp.collectionTracking.employee" for="field_employee">Employee</label>
+                    <select class="form-control" id="field_employee" name="employee" formControlName="employee">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="employeeOption.id === editForm.get('employee')!.value?.id ? editForm.get('employee')!.value : employeeOption" *ngFor="let employeeOption of employees; trackBy: trackById">{{ employeeOption.id }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
