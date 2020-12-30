@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CollectionTrackingApplicationSharedModule } from 'app/shared/shared.module';
+import { CcwApplicationSharedModule } from 'app/shared/shared.module';
 
 import { MetricsComponent } from './metrics.component';
 
 import { metricsRoute } from './metrics.route';
 
 @NgModule({
-  imports: [CollectionTrackingApplicationSharedModule, RouterModule.forChild([metricsRoute])],
+  imports: [CcwApplicationSharedModule, RouterModule.forChild([metricsRoute])],
   declarations: [MetricsComponent],
 })
 export class MetricsModule {}

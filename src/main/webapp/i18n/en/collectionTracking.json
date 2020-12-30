@@ -1,0 +1,39 @@
+{
+  "ccwApplicationApp": {
+    "collectionTracking": {
+      "home": {
+        "title": "Collection Trackings",
+        "createLabel": "Create a new Collection Tracking",
+        "createOrEditLabel": "Create or edit a Collection Tracking",
+        "notFound": "No Collection Trackings found"
+      },
+      "created": "A new Collection Tracking is created with identifier {{ param }}",
+      "updated": "A Collection Tracking is updated with identifier {{ param }}",
+      "deleted": "A Collection Tracking is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Collection Tracking {{ id }}?"
+      },
+      "detail": {
+        "title": "Collection Tracking"
+      },
+      "employeeID": "Employee ID",
+      "unitID": "Unit ID",
+      "employeeName": "Employee Name",
+      "businessProposal": "Business Proposal",
+      "subProposal": "Sub Proposal",
+      "mobileNo": "Mobile No",
+      "relationId": "Relation Id",
+      "accountNo": "Account No",
+      "accountTitle": "Account Title",
+      "noOfVisits": "No Of Visits",
+      "osAmount": "Os Amount",
+      "osProfit": "Os Profit",
+      "odDays": "Od Days",
+      "loanOfficer": "Loan Officer",
+      "visitedBy": "Visited By",
+      "pptDate": "Ppt Date",
+      "remakrs": "Remakrs",
+      "employee": "Employee"
+    }
+  }
+}
