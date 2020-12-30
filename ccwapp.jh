@@ -1,0 +1,48 @@
+
+application {
+  config {
+    baseName CCWApplication,
+    applicationType monolith,
+    packageName com.finca.ccw,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    clientFramework angular
+  }
+  entities *
+}
+
+entity Employee {
+  EmployeeID String required
+  UnitID String required
+  FirstName String required
+  LastName String required
+  EmailAddress String required
+  Login String 
+}
+
+entity CollectionTracking {
+  EmployeeID String required
+  UnitID String required
+  EmployeeName String required
+  BusinessProposal String required
+  SubProposal String required
+  MobileNo String required
+  RelationId String required
+  AccountNo String required
+  AccountTitle String required
+  NoOfVisits  Integer required
+  OsAmount BigDecimal required
+  OsProfit BigDecimal required
+  OdDays  String required
+  LoanOfficer String required
+  VisitedBy String required
+  PptDate  LocalDate required
+  Remakrs String required
+ 
+  
+}
+
+relationship OneToMany {
+  Employee to CollectionTracking
+}
+    
